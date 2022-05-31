@@ -10,12 +10,16 @@ export const useFetch = (url, mockWait = false) => {
 			if (mockWait) {
 				setTimeout(() => {
 					setItems(_items);
-				}, 3000);
+				}, Math.floor(Math.random() * 2000) + 1000);
 			} else {
 				setItems(_items);
 			}
 		})();
 	}, []);
 
-	return [items, items.length, items.length === 0];
+	return {
+		items,
+		totalItems: items.length,
+		isLoading: items.length === 0,
+	};
 };
