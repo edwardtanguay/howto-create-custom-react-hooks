@@ -1,8 +1,7 @@
 import './App.scss';
 import { PageWelcome } from './pages/PageWelcome';
-import { PageBooks } from './pages/PageBooks';
+import { PageUseFetch } from './pages/PageUseFetch';
 import { PageUseToggle } from './pages/PageUseToggle';
-import { PageAbout } from './pages/PageAbout';
 import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
@@ -12,14 +11,12 @@ function App() {
 			<hr />
 			<NavLink to="/welcome">Welcome</NavLink> |{' '}
 			<NavLink to="/use-toggle">useToggle</NavLink> |{' '}
-			<NavLink to="/books">Books</NavLink> |{' '}
-			<NavLink to="/about">About</NavLink>
+			<NavLink to="/use-fetch">useFetch</NavLink> |{' '}
 			<hr />
 			<Routes>
 				<Route path="/welcome" element={<PageWelcome />} />
 				<Route path="/use-toggle" element={<PageUseToggle />} />
-				<Route path="/books" element={<PageBooks />} />
-				<Route path="/about" element={<PageAbout />} />
+				<Route path="/use-fetch" element={<PageUseFetch />} />
 				<Route path="/" element={<Navigate to="/welcome" replace />}/>
 			</Routes>
 		</div>

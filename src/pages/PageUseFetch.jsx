@@ -1,6 +1,6 @@
 import { useFetch } from '../hooks/useFetch';
 
-export const PageBooks = () => {
+export const PageUseFetch = () => {
 	const {
 		items: techBooks,
 		totalItems: totalTechBooks,
@@ -16,7 +16,7 @@ export const PageBooks = () => {
 
 	return (
 		<div className="page_books">
-			<h2>Books</h2>
+			<h2>useFetch</h2>
 			{techBooksAreLoading ? (
 				<h3>Tech books are loading...</h3>
 			) : (
